@@ -42,6 +42,7 @@ export const getFoodList = catchAsync(async (req, res) => {
       };
     }
   }
+  
   const data = await foodModel.find(filters, null, options);
   return res.status(200).json({
     data,

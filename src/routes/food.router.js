@@ -6,6 +6,6 @@ const foodRouter = Router();
 foodRouter.get("/", getFoodList);
 foodRouter.get("/category", getCategory);
 foodRouter.post("/create", createFood);
-foodRouter.put("/update", updateFood);
+foodRouter.put("/update/:id", updateFood);
 
 export default foodRouter;
