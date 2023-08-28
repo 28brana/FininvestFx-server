@@ -47,3 +47,10 @@ export const getFoodList = catchAsync(async (req, res) => {
     data,
   });
 });
+
+export const getCategory = catchAsync(async (req, res) => {
+  const data = await foodModel.find({}, ["category"]).distinct('category');
+  return res.status(200).json({
+    data,
+  });
+});
